@@ -10,19 +10,83 @@ import java.util.Scanner;
 public class Problema1 {
 	
 	public static void main(String[] args) throws IOException {
-		 /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		 System.out.print("Enter a string: ");
-		 
-		 String[] str = br.readLine().split(" ");
-		*/
 		
-		Scanner scanner = new Scanner(System.in);
-        ArrayList<String> arrayLines = new ArrayList<>();
-        String line_size = scanner.nextLine();
-        int size = Integer.parseInt(line_size);
+		//Scanner scanner = new Scanner(System.in);
 
-        String line;
-        while(size > 0){
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String x = br.readLine();
+		
+        ArrayList<String> arrayLines = new ArrayList<>();
+        arrayLines.add(x);
+        
+        int size = Integer.parseInt(x);
+        int auxiliar = size;
+        
+        
+        System.out.println("Size: " + size);
+        
+        String[] array = new String[20];
+     
+        
+        String str = "2 3 4"; 
+        String[] arrOfStr = new String[20]; 
+        int max = 0;
+        
+        //for (String a : arrOfStr) 
+        //    System.out.println(a);  
+        
+        //System.out.print(arrOfStr[0]);
+       
+        while(size > 0) {
+        	String line = br.readLine();
+        	arrOfStr = line.split(" "); 
+        	for (String a : arrOfStr) 
+                if(Integer.parseInt(a) > max) {
+                	max = Integer.parseInt(a);
+                }
+        	//i++;
+        	size--;
+        }
+        
+        System.out.print("Max: " + max);
+        
+        
+        
+        //ArrayList[][] array = new ArrayList[20][20];
+        //array[0][0] = new ArrayList();
+        
+        /*int i = 0;
+        
+        int line2 = Integer.parseInt(br.readLine());
+        System.out.print(line2);
+        
+        while(size > 0) {
+        	String line = br.readLine();
+        	System.out.println(size);
+        	System.out.println(line);
+        	//System.out.println("Line: " + line);
+        	arrayLines.add(line);
+        	//i++;
+        	size--;
+        }
+        
+        System.out.println("-----------------------");
+        
+        //System.out.print(arrayLines.get(1));
+        for(int j = 1; j <= auxiliar; j++) {
+        	System.out.println(j);
+        	System.out.println(arrayLines.get(j));
+        }*/
+        
+      
+        
+        
+        //System.out.println(array[0][0].get(0));
+        //String line_size = scanner.nextLine();
+        //int size = Integer.parseInt(line_size);
+        //String line;
+        
+        /*while(size > 0){
             line = scanner.nextLine();
         
               int size2 =  Integer.parseInt(line);
@@ -43,8 +107,8 @@ public class Problema1 {
         		max = Integer.parseInt(arrayLines.get(i));
         		
         	}
-        }
-        System.out.print(max);		
+        }*/
+        //System.out.print(max);		
 	}
 
 }
